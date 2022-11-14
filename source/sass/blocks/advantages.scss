@@ -1,0 +1,144 @@
+.advantages {
+  width: 100%;
+  max-width: 1262px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 120px;
+
+  @include vp-1023 {
+    padding: 0 50px;
+    margin-bottom: 75px;
+  }
+
+  @include vp-767 {
+    padding: 0 25px;
+    margin-bottom: 47px;
+  }
+}
+
+.advantages ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+}
+
+.advantages__item {
+  min-height: 300px;
+  border: 1px solid $color-grey;
+  border-left: 5px solid $color-light-blue;
+  padding: 40px;
+  cursor: pointer;
+
+  @include vp-1023 {
+    padding-bottom: 30px;
+  }
+
+  @include vp-767 {
+    padding: 25px;
+    padding-top: 30px;
+    padding-right: 30px;
+    min-height: 340px;
+
+    &--privacy,
+    &--price {
+      min-height: 325px;
+
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.advantages li {
+  &:hover {
+    background-color: $color-light-blue;
+
+    h3,
+    p {
+      color: $color-light-grey;
+    }
+
+    svg {
+      use {
+        fill: $color-light-grey;
+      }
+    }
+  }
+
+  @include vp-1023 {
+    @include hover-focus {
+      background-color: $color-default-white;
+
+      h3 {
+        color: $color-light-blue;
+      }
+
+      p {
+        color: $color-dark-grey;
+      }
+
+      svg {
+        use {
+          fill: $color-light-blue;
+        }
+      }
+    }
+  }
+}
+
+
+.advantages h3 {
+  font-family: $font-roboto-condensed;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  align-items: center;
+  color: $color-light-blue;
+  margin: 0;
+  margin-bottom: 13px;
+
+  @include vp-1023 {
+    margin-bottom: 9px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+  }
+}
+
+.advantages p {
+  font-family: $font-pt-mono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: $color-dark-grey;
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.advantages svg {
+  fill: $color-light-blue;
+  margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 9px;
+  }
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+  }
+}

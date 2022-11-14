@@ -1,0 +1,322 @@
+.form h2 {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: $font-roboto-condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 7px;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 141%;
+    margin-bottom: 10px;
+  }
+}
+
+.form--modal h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 141%;
+}
+
+.form p {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0 10px;
+  font-family: $font-pt-mono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 23px;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 135%;
+    margin-bottom: 32px;
+  }
+}
+
+.form--modal p {
+  width: 90%;
+  padding: 0;
+  margin-bottom: 37px;
+}
+
+.form__info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 10px;
+
+  &--modal {
+    width: 100%;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  @include vp-1023 {
+    padding-left: 0;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.form__info input,
+.form__info textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  background: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  width: 47%;
+  cursor: pointer;
+  font-family: $font-pt-mono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  @include vp-1023 {
+    width: 48%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.form__info--modal input,
+.form__info--modal textarea {
+  width: 100%;
+}
+
+.form__info textarea {
+  padding: 20px 13px;
+  margin-bottom: 33px;
+  width: 100%;
+  min-height: 155px;
+
+  @include vp-1023 {
+    width: 100%;
+    padding: 30px 13px;
+  }
+
+  @include vp-767 {
+    min-height: 180px;
+    padding: 20px 13px;
+    margin-bottom: 27px;
+  }
+}
+
+.form__info--modal textarea {
+  margin-bottom: 23px;
+}
+
+.form__button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.form__button--modal {
+  flex-direction: column;
+}
+
+.form__button button {
+  width: 45%;
+  min-height: 45px;
+  margin-left: 10px;
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  border: none;
+  border-radius: 3px;
+  background-color: $color-dark-grey;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-dark-blue;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include vp-1023 {
+    width: 40%;
+    margin-left: 0;
+
+    @include hover-focus {
+      background-color: $color-dark-grey;
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.form__button--modal button {
+  width: 100%;
+  padding: 10px;
+  margin-left: 0;
+  margin-bottom: 5px;
+
+  &:hover {
+    color: $color-dark-grey;
+    outline: 1px solid $color-dark-grey;
+    background-color: transparent;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.form__button div {
+  width: 44%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include vp-1023 {
+    width: 47%;
+  }
+
+  @include vp-767 {
+    width: 92%;
+    margin: 0 auto;
+  }
+}
+
+.form__button--modal div {
+  width: 100%;
+  padding: 10px;
+  padding-left: 17px;
+}
+
+.form__button label {
+  position: relative;
+  font-family: $font-pt-mono;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  opacity: 0.8;
+  padding: 15px;
+  padding-left: 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::before {
+    position: absolute;
+    left: -7px;
+    top: 22px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    content: "";
+  }
+
+  @include vp-1023 {
+    padding: 10px;
+    padding-left: 21px;
+
+    &::before {
+      left: -7px;
+      top: 18px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 25px;
+    padding-left: 20px;
+
+    &::before {
+      top: 31px;
+      left: -7px;
+    }
+  }
+}
+
+.form__button--modal label {
+  padding: 5px;
+  padding-left: 19px;
+
+  &::before {
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    content: "";
+  }
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-image: url("../img/svg/checkbox.svg");
+  background-size: 9px 6px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:focus + label::before {
+  outline: 1px solid $color-default-black;
+}
+
+.form__button--modal input[type="checkbox"]:checked + label::before {
+  background-image: url("../img/svg/checkbox.svg");
+  background-size: 9px 6px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.form__button--modal input[type="checkbox"]:focus + label::before {
+  outline: 1px solid $color-default-black;
+}

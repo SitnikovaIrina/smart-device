@@ -1,0 +1,180 @@
+.company-info {
+  display: flex;
+  width: 100%;
+  max-width: 1262px;
+  min-height: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 100px;
+
+  @include vp-1023 {
+    padding: 0 45px;
+    margin-bottom: 79px;
+  }
+
+  @include vp-767 {
+    padding: 0 25px;
+    margin-bottom: 68px;
+  }
+}
+
+.company-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+
+  @include vp-1023 {
+    padding-left: 30px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+}
+
+.company-info img {
+  display: block;
+  width: 150px;
+  height: 320px;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.company-info h2 {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: $font-roboto-condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-dark-grey;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 141%;
+  }
+}
+
+.company-info p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $font-pt-mono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-dark-grey;
+
+  br {
+    display: none;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 134%;
+    margin-bottom: 20px;
+
+    br {
+      display: block;
+    }
+  }
+}
+
+
+/* Стили для текстового поля с кнопкой "Далее" */
+.company-info__limiter {
+  max-height: 170px;
+  overflow: hidden;
+  position: relative;
+
+  @include vp-1023 {
+    max-height: 260px;
+  }
+
+  @include vp-767 {
+    max-height: 205px;
+  }
+}
+
+.company-info__limiter .company-info__bottom {
+  position: absolute; /* Если прыгает - можно попробовать sticky */
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.company-info__read-more-checker {
+  opacity: 0;
+  position: absolute;
+}
+
+.company-info__read-more-checker:checked ~ .company-info__limiter {
+  max-height: none;
+}
+
+.company-info__read-more-checker:checked ~ .company-info__limiter .company-info__bottom {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.company-info__read-more-checker ~ .company-info__read-more-button::before {
+  content: "Подробнее";
+}
+
+.company-info__read-more-checker:checked ~ .company-info__read-more-button::before {
+  content: "Свернуть";
+}
+
+.company-info__read-more-button {
+  display: block;
+
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-light-blue;
+
+  width: 180px;
+  min-height: 45px;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid $color-light-blue;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-light-blue;
+    color: $color-default-white;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include vp-1023 {
+    margin-top: 15px;
+
+    @include hover-focus {
+      background-color: transparent;
+      color: $color-light-blue;
+    }
+  }
+
+  @include vp-767 {
+    width: 160px;
+    min-height: 35px;
+    padding: 10px;
+    margin-top: 15px;
+  }
+}

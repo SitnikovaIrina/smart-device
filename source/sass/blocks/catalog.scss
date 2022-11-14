@@ -1,0 +1,228 @@
+.catalog {
+  width: 100%;
+  min-height: 960px;
+  background-color: $color-dark-grey;
+
+  @include vp-1023 {
+    min-height: 1080px;
+  }
+
+  @include vp-767 {
+    min-height: 1050px;
+  }
+}
+
+.catalog__wrapper {
+  box-sizing: border-box;
+  max-width: 1262px;
+  margin: 0 auto;
+  padding: 65px 20px;
+
+  @include vp-1023 {
+    padding: 55px 50px;
+  }
+
+  @include vp-767 {
+    padding: 45px 25px;
+  }
+}
+
+.catalog__title {
+  margin: 0;
+  font-family: $font-roboto-condensed;
+  font-weight: 400;
+  color: $color-default-white;
+
+  &--large {
+    display: block;
+    margin-bottom: 55px;
+    font-size: 36px;
+    line-height: 51px;
+
+    @include vp-1023 {
+      margin-bottom: 37px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &--small {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+      width: 97%;
+      margin-bottom: 30px;
+      font-size: 28px;
+      line-height: 141%;
+    }
+  }
+}
+
+.catalog__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 85px;
+  min-height: 650px;
+
+  @include vp-1023 {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+    gap: 31px;
+  }
+}
+
+.catalog__item-link {
+  position: relative;
+  min-height: 650px;
+  padding: 47px 40px;
+  cursor: pointer;
+  background-color: $color-dark-grey;
+
+  &--production {
+    background-image: url("../img/jpeg/product-1-card-large.jpg");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/jpeg/product-1-card-large@2x.jpg");
+    }
+  }
+
+  &--installation {
+    background-image: url("../img/jpeg/product-2-card-large.jpg");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/jpeg/product-2-card-large@2x.jpg");
+    }
+  }
+
+  &--accessories {
+    background-image: url("../img/jpeg/product-3-card-large.jpg");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/jpeg/product-3-card-large@2x.jpg");
+    }
+  }
+
+  &::after {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    background-color: $color-light-blue;
+    background-image: url("../img/svg/arrow.svg");
+    background-size: 5px 10px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 3px 0 0 0;
+    content: "";
+  }
+
+  &:hover {
+    outline: 1px solid $color-light-grey;
+  }
+
+  &:active {
+    outline: 1px solid $color-light-grey;
+    opacity: 0.6;
+  }
+
+  @include vp-1023 {
+    min-height: 250px;
+    padding: 38px 45px;
+
+    &--production {
+      background-image: url("../img/jpeg/product-1-card-medium.jpg");
+      background-size: cover;
+
+      @include retina {
+        background-image: url("../img/jpeg/product-1-card-medium@2x.jpg");
+      }
+    }
+
+    &--installation {
+      background-image: url("../img/jpeg/product-2-card-medium.jpg");
+      background-size: cover;
+
+      @include retina {
+        background-image: url("../img/jpeg/product-2-card-medium@2x.jpg");
+      }
+    }
+
+    &--accessories {
+      background-image: url("../img/jpeg/product-3-card-medium.jpg");
+      background-size: cover;
+
+      @include retina {
+        background-image: url("../img/jpeg/product-3-card-medium@2x.jpg");
+      }
+    }
+
+    @include hover-focus {
+      outline: none;
+    }
+  }
+
+  @include vp-767 {
+    padding: 25px 30px;
+
+    &--production {
+      background-image: url("../img/jpeg/product-1-card-small.jpg");
+      background-size: cover;
+
+      @include retina {
+        background-image: url("../img/jpeg/product-1-card-small@2x.jpg");
+      }
+    }
+
+    &--installation {
+      background-image: url("../img/jpeg/product-2-card-small.jpg");
+      background-size: cover;
+
+      @include retina {
+        background-image: url("../img/jpeg/product-2-card-small@2x.jpg");
+      }
+    }
+
+    &--accessories {
+      background-image: url("../img/jpeg/product-3-card-small.jpg");
+      background-size: cover;
+
+      @include retina {
+        background-image: url("../img/jpeg/product-3-card-small@2x.jpg");
+      }
+    }
+
+    &::after {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.catalog__list h3 {
+  margin: 0;
+  width: 60%;
+  font-family: $font-roboto-condensed;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    width: 26%;
+  }
+
+  @include vp-767 {
+    width: 64%;
+    font-size: 18px;
+  }
+}
