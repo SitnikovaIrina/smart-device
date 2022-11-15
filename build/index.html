@@ -18,7 +18,7 @@
           <h1 class="visually-hidden">Главная страница</h1>
           <div class="header-container__cap-background">
             <div class="header-container__cap">
-              <a class="header-container__logo-link" href="#">
+              <a class="header-container__logo-link">
                 <svg class="header-container__logo-link-desktop" role="img" aria-label="Логотип компании." aria-hidden="true" focusable="false" width="215" height="55" viewBox="0 0 215 55">
                   <use xlink:href="./img/sprite_auto.svg#logo-desktop"></use>
                 </svg>
@@ -40,7 +40,7 @@
                   <span>+7 (495) 000 52 52</span>
                 </a>
               </div>
-              <button class="header-container__button" type="button" data-open-modal="feedback">Заказать звонок</button>
+              <a class="header-container__button" type="button" href="#modal" data-open-modal="feedback">Заказать звонок</a>
             </div>
           </div>
           <div class="basic-info">
@@ -106,14 +106,26 @@
             <h2 class="catalog__title catalog__title--large">Smart Device предлагает следующие товары и&nbsp;услуги</h2>
             <h2 class="catalog__title catalog__title--small">Товары и&nbsp;услуги Smart Device</h2>
             <div class="catalog__list">
-              <a class="catalog__item-link catalog__item-link--production" href="#">
-                <h3>Производство печатных плат</h3>
+              <a class="catalog__item-link" href="#">
+                <h3 class="catalog__item-title">Производство печатных плат</h3>
+                <picture>
+                  <source srcset="img/webp/catalog.webp 1x, img/webp/catalog@2x.webp 2x" data-srcset="img/webp/catalog.webp 1x, img/webp/catalog@2x.webp 2x" type="image/webp">
+                  <img class="catalog__item-img catalog__item-img--production" src="img/jpeg/catalog.jpg" srcset="img/jpeg/catalog@2x.jpg 2x" data-src="img/jpeg/catalog.jpg" data-srcset="img/jpeg/catalog@2x.jpg 2x" width="1493" height="817" alt="Печатные платы.">
+                </picture>
               </a>
-              <a class="catalog__item-link catalog__item-link--installation" href="#">
-                <h3>Монтаж печатных плат</h3>
+              <a class="catalog__item-link" href="#">
+                <h3 class="catalog__item-title">Монтаж печатных плат</h3>
+                <picture>
+                  <source srcset="img/webp/catalog.webp 1x, img/webp/catalog@2x.webp 2x" data-srcset="img/webp/catalog.webp 1x, img/webp/catalog@2x.webp 2x" type="image/webp">
+                  <img class="catalog__item-img catalog__item-img--installation" src="img/jpeg/catalog.jpg" srcset="img/jpeg/catalog@2x.jpg 2x" data-src="img/jpeg/catalog.jpg" data-srcset="img/jpeg/catalog@2x.jpg 2x" width="1920" height="880" alt="Печатные платы.">
+                </picture>
               </a>
-              <a class="catalog__item-link catalog__item-link--accessories" href="#">
-                <h3>Комплектующие для светотехники</h3>
+              <a class="catalog__item-link" href="#">
+                <h3 class="catalog__item-title catalog__item-title--accessories">Комплектующие для светотехники</h3>
+                <picture>
+                  <source srcset="img/webp/catalog.webp 1x, img/webp/catalog@2x.webp 2x" data-srcset="img/webp/catalog.webp 1x, img/webp/catalog@2x.webp 2x" type="image/webp">
+                  <img class="catalog__item-img catalog__item-img--accessories" src="img/jpeg/catalog.jpg" srcset="img/jpeg/catalog@2x.jpg 2x" data-src="img/jpeg/catalog.jpg" data-srcset="img/jpeg/catalog@2x.jpg 2x" width="1920" height="880" alt="Печатные платы.">
+                </picture>
               </a>
             </div>
           </div>
@@ -222,7 +234,7 @@
 
     <!-- Модалка -->
 
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" id="modal" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">

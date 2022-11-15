@@ -13,6 +13,7 @@
 }
 
 .catalog__wrapper {
+  position: relative;
   box-sizing: border-box;
   max-width: 1262px;
   margin: 0 auto;
@@ -79,37 +80,11 @@
 
 .catalog__item-link {
   position: relative;
-  min-height: 650px;
-  padding: 47px 40px;
+  width: auto;
+  height: 650px;
   cursor: pointer;
   background-color: $color-dark-grey;
-
-  &--production {
-    background-image: url("../img/jpeg/product-1-card-large.jpg");
-    background-size: cover;
-
-    @include retina {
-      background-image: url("../img/jpeg/product-1-card-large@2x.jpg");
-    }
-  }
-
-  &--installation {
-    background-image: url("../img/jpeg/product-2-card-large.jpg");
-    background-size: cover;
-
-    @include retina {
-      background-image: url("../img/jpeg/product-2-card-large@2x.jpg");
-    }
-  }
-
-  &--accessories {
-    background-image: url("../img/jpeg/product-3-card-large.jpg");
-    background-size: cover;
-
-    @include retina {
-      background-image: url("../img/jpeg/product-3-card-large@2x.jpg");
-    }
-  }
+  overflow: hidden;
 
   &::after {
     position: absolute;
@@ -128,6 +103,7 @@
 
   &:hover {
     outline: 1px solid $color-light-grey;
+    opacity: 0.8;
   }
 
   &:active {
@@ -136,35 +112,7 @@
   }
 
   @include vp-1023 {
-    min-height: 250px;
-    padding: 38px 45px;
-
-    &--production {
-      background-image: url("../img/jpeg/product-1-card-medium.jpg");
-      background-size: cover;
-
-      @include retina {
-        background-image: url("../img/jpeg/product-1-card-medium@2x.jpg");
-      }
-    }
-
-    &--installation {
-      background-image: url("../img/jpeg/product-2-card-medium.jpg");
-      background-size: cover;
-
-      @include retina {
-        background-image: url("../img/jpeg/product-2-card-medium@2x.jpg");
-      }
-    }
-
-    &--accessories {
-      background-image: url("../img/jpeg/product-3-card-medium.jpg");
-      background-size: cover;
-
-      @include retina {
-        background-image: url("../img/jpeg/product-3-card-medium@2x.jpg");
-      }
-    }
+    height: 250px;
 
     @include hover-focus {
       outline: none;
@@ -172,34 +120,7 @@
   }
 
   @include vp-767 {
-    padding: 25px 30px;
-
-    &--production {
-      background-image: url("../img/jpeg/product-1-card-small.jpg");
-      background-size: cover;
-
-      @include retina {
-        background-image: url("../img/jpeg/product-1-card-small@2x.jpg");
-      }
-    }
-
-    &--installation {
-      background-image: url("../img/jpeg/product-2-card-small.jpg");
-      background-size: cover;
-
-      @include retina {
-        background-image: url("../img/jpeg/product-2-card-small@2x.jpg");
-      }
-    }
-
-    &--accessories {
-      background-image: url("../img/jpeg/product-3-card-small.jpg");
-      background-size: cover;
-
-      @include retina {
-        background-image: url("../img/jpeg/product-3-card-small@2x.jpg");
-      }
-    }
+    height: 250px;
 
     &::after {
       width: 40px;
@@ -208,9 +129,61 @@
   }
 }
 
-.catalog__list h3 {
+.catalog__item-img {
+  width: 150%;
+  height: 150%;
+  object-fit: cover;
+
+  &--production {
+    object-position: -180px -200px;
+  }
+
+  &--installation {
+    object-position: -515px -205px;
+  }
+
+  &--accessories {
+    object-position: -875px -190px;
+  }
+
+  @include vp-1023 {
+    width: 400%;
+    height: 400%;
+
+    &--production {
+      object-position: -248px -640px;
+    }
+
+    &--installation {
+      object-position: -632px -407px;
+    }
+
+    &--accessories {
+      object-position: -150px -450px;
+    }
+  }
+
+  @include vp-767 {
+    &--production {
+      object-position: -380px -390px;
+    }
+
+    &--installation {
+      object-position: -366px -632px;
+    }
+
+    &--accessories {
+      object-position: -890px -485px;
+    }
+  }
+}
+
+.catalog__item-title {
+  position: absolute;
+  top: 45px;
+  left: 40px;
   margin: 0;
-  width: 60%;
+  width: 48%;
   font-family: $font-roboto-condensed;
   font-weight: 400;
   font-size: 20px;
@@ -218,11 +191,19 @@
   color: $color-default-white;
 
   @include vp-1023 {
-    width: 26%;
+    width: 22%;
+    top: 37px;
+    left: 45px;
+
+    &--accessories {
+      width: 23%;
+    }
   }
 
   @include vp-767 {
-    width: 64%;
+    width: 50%;
+    top: 25px;
+    left: 30px;
     font-size: 18px;
   }
 }
