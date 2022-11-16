@@ -1167,6 +1167,23 @@ button,
   margin-bottom: 100px;
 }
 
+/*.company-info span {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  font-size: 156px;
+  line-height: 184px;
+  color: transparent;
+  background-clip: text;
+  background-image: url("../img/png/background-year.png");
+  background-position: 50% 50%;
+
+  @include vp-767 {
+    display: none;
+  }
+}*/
+
 .company-info__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1180,6 +1197,7 @@ button,
 
 .company-info img {
   display: block;
+  max-width: 150px;
   width: 150px;
   height: 320px;
 }
@@ -1716,7 +1734,10 @@ input[type=checkbox]:focus + label::before {
 
 .accordion__item {
   position: relative;
-  width: 47%;
+}
+
+.accordion__item--sections {
+  width: 58%;
 }
 
 .accordion__item:focus {
@@ -1750,7 +1771,7 @@ input[type=checkbox]:focus + label::before {
 }
 
 .accordion__header--info {
-  padding-left: 68px;
+  padding-left: 43px;
 }
 
 .accordion__icon {
@@ -1768,24 +1789,85 @@ input[type=checkbox]:focus + label::before {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
+  -ms-grid-rows: min-content min-content min-content min-content;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content min-content;
   width: 100%;
   max-height: 144px;
   padding-left: 0;
 }
 
 .accordion__nav-item {
-  width: 54%;
   padding: 3px 10px;
   margin-left: 25px;
+}
+
+.accordion__nav-item--info {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.accordion__nav-item--products {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.accordion__nav-item--production {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.accordion__nav-item--mounting {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+
+.accordion__nav-item--accessories {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.accordion__nav-item--delivery {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.accordion__nav-item--contacts {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
 }
 
 .accordion__nav-link {
@@ -1808,7 +1890,7 @@ input[type=checkbox]:focus + label::before {
 .accordion__info-list {
   width: 67%;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1826,9 +1908,7 @@ input[type=checkbox]:focus + label::before {
 }
 
 .accordion__info-address {
-  width: 83%;
-  padding-left: 32px;
-  margin: 0 auto;
+  margin: 0;
   margin-bottom: 10px;
 }
 
@@ -1839,6 +1919,7 @@ input[type=checkbox]:focus + label::before {
   font-size: 16px;
   line-height: 135%;
   color: rgba(255, 255, 255, 0.7);
+  padding-left: 43px;
 }
 
 .accordion__info-tel {
@@ -2212,6 +2293,20 @@ input[type=checkbox]:focus + label::before {
   }
 
   .accordion__nav-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-height: 144px;
+    padding-left: 0;
     min-height: 234px;
     width: 100%;
   }
@@ -2241,6 +2336,10 @@ input[type=checkbox]:focus + label::before {
     padding-left: 0;
     margin: 0;
     margin-bottom: 5px;
+  }
+
+  .accordion__info-tel {
+    padding-left: 0;
   }
 
   .accordion__info-tel:hover {
