@@ -1818,42 +1818,6 @@ input[type=checkbox]:focus + label::before {
   padding: 4px 10px;
 }
 
-.accordion__item--info {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-.accordion__item--products {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-}
-
-.accordion__item--production {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3/4;
-}
-
-.accordion__item--mounting {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
-  grid-row: 4/5;
-}
-
 .accordion__item--accessories {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -1981,7 +1945,7 @@ input[type=checkbox]:focus + label::before {
 
   .header-container__info {
     width: unset;
-    margin-right: 43px;
+    margin-right: 23px;
     margin-top: 20px;
     min-width: 100px;
     padding: 0;
@@ -1996,10 +1960,11 @@ input[type=checkbox]:focus + label::before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px;
+    margin-right: 20px;
   }
 
-  .header-container__link:not(:last-child) {
-    margin-right: 20px;
+  .header-container__link--mail {
+    margin-left: 0;
   }
 
   .header-container__link span {
@@ -2383,7 +2348,7 @@ input[type=checkbox]:focus + label::before {
   }
 
   .header-container__info {
-    margin-right: 20px;
+    margin-right: 0;
     margin-top: 10px;
     -webkit-box-pack: end;
     -ms-flex-pack: end;

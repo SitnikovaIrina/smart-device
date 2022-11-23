@@ -107,7 +107,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding-left: 0;
-
     min-height: 234px;
     width: 100%;
   }
@@ -132,26 +131,6 @@
   color: $color-white-transparent;
   cursor: pointer;
   padding: 4px 10px;
-
-  &--info {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  &--products {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-
-  &--production {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
-
-  &--mounting {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-  }
 
   &--accessories {
     grid-column: 2 / 3;
