@@ -81,7 +81,7 @@
   border: none;
   border-radius: 3px;
   width: 47%;
-  cursor: pointer;
+  cursor: text;
   font-family: $font-pt-mono;
   font-weight: 400;
   font-size: 16px;
@@ -142,14 +142,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  flex-direction: row-reverse;
 
   @include vp-767 {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
 .form__button--modal {
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .form__button button {
@@ -163,6 +164,7 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  user-select: none;
   color: $color-default-white;
   border: none;
   border-radius: 3px;
@@ -196,6 +198,7 @@
   padding: 10px;
   margin-left: 0;
   margin-bottom: 5px;
+  user-select: none;
 
   &:hover {
     color: $color-dark-grey;

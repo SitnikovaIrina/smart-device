@@ -18,23 +18,6 @@
   }
 }
 
-/*.company-info span {
-  writing-mode: vertical-rl;
-  transform: rotate(-180deg);
-  font-family: $font-roboto-condensed;
-  font-weight: 700;
-  font-size: 156px;
-  line-height: 184px;
-  color: transparent;
-  background-clip: text;
-  background-image: url("../img/png/background-year.png");
-  background-position: 50% 50%;
-
-  @include vp-767 {
-    display: none;
-  }
-}*/
-
 .company-info__wrapper {
   display: flex;
   flex-direction: column;
@@ -148,6 +131,14 @@
 
 .company-info__read-more-checker:checked ~ .company-info__read-more-button::before {
   content: "Свернуть";
+}
+
+.company-info__read-more-checker:focus ~ .company-info__read-more-button {
+  outline: 2px solid $color-dark-grey;
+}
+
+.company-info__read-more-checker:checked:focus ~ .company-info__read-more-button {
+  outline: 2px solid $color-dark-grey;
 }
 
 .company-info__read-more-button {
