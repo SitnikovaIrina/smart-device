@@ -828,7 +828,7 @@ button,
   position: fixed;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
   min-height: 120px;
   margin: 0 auto;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
